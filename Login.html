@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Login</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+  </head>
+  <body>
+    <form name="myLoginForm">
+    <div class="container">
+<header>
+    <header class="container card text-white bg-primary"><h1>Member Login</h1></header>
+</header>
+    <div class="form-group">
+        <label for="Uname" class=""><b>User Name</b></label>
+        <input id="txtUser" class="form-control" type="text" name="UserName" placeholder="Enter Username">
+    </div>
+    <div class="form-group">
+        <label for="pass"><b>Password</b></label>
+        <input id="txtPass" class="form-control" type="text" name="Password" placeholder="Enter Passowrd" required>
+    </div>
+    <div class="form-group">
+        <input type="checkbox"  checked="checked" name="remember"> Remember me
+    </div>
+    <div class="form-group">
+        <input id="btnLogin" type="button" value="Login" class="btn btn-primary"></input>
+    </div>    
+    <div class="container">
+        <p> You don't have an account? <a href="SignUp.html">Sign Up</a></p>
+       </div>
+       <footer class="container card text-white bg-primary">
+        <h10>CopyRights 2021</h10>
+    </footer>
+    </div>
+
+</form>
+    
+
+</body>
+<script type = "text/javascript"> 
+$("btnLogin").click(function()
+{
+    alert("button click");
+});
+    function validate(){
+        
+        if( document.myLoginForm.UserName.value == "" ) {  
+           alert( "Please provide your Username!" );      
+           document.myLoginForm.UserName.focus() ; 
+           return false;     
+                         }  
+        if( document.myLoginForm.Password.value == "" ) {  
+           alert( "Please provide your Password!" );      
+           document.myLoginForm.Password.focus() ;   
+           return false;   
+           
+        }  
+        return true;
+    }
+</script>
+</html>
