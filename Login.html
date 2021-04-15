@@ -25,7 +25,7 @@
         <input type="checkbox"  checked="checked" name="remember"> Remember me
     </div>
     <div class="form-group">
-        <input id="btnLogin" type="button" value="Login" class="btn btn-primary"></input>
+        <input id="btnLogin" type="Submit" value="Login" class="btn btn-primary"></input>
     </div>    
     <div class="container">
         <p> You don't have an account? <a href="SignUp.html">Sign Up</a></p>
@@ -39,25 +39,4 @@
     
 
 </body>
-<script type = "text/javascript"> 
-$("btnLogin").click(function()
-{
-    alert("button click");
-});
-    function validate(){
-        
-        if( document.myLoginForm.UserName.value == "" ) {  
-           alert( "Please provide your Username!" );      
-           document.myLoginForm.UserName.focus() ; 
-           return false;     
-                         }  
-        if( document.myLoginForm.Password.value == "" ) {  
-           alert( "Please provide your Password!" );      
-           document.myLoginForm.Password.focus() ;   
-           return false;   
-           
-        }  
-        return true;
-    }
-</script>
 </html>
