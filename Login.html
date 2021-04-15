@@ -8,24 +8,24 @@
     
   </head>
   <body>
-    <form name="myLoginForm">
+   
     <div class="container">
 <header>
     <header class="container card text-white bg-primary"><h1>Member Login</h1></header>
 </header>
     <div class="form-group">
         <label for="Uname" class=""><b>User Name</b></label>
-        <input id="txtUser" class="form-control" type="text" name="UserName" placeholder="Enter Username">
+        <input id="txtUser" class="form-control" type="text" name="UserName" placeholder="Enter Username" >
     </div>
     <div class="form-group">
         <label for="pass"><b>Password</b></label>
-        <input id="txtPass" class="form-control" type="text" name="Password" placeholder="Enter Passowrd" required>
+        <input id="txtPass" class="form-control" type="text" name="Password" placeholder="Enter Passowrd" >
     </div>
     <div class="form-group">
         <input type="checkbox"  checked="checked" name="remember"> Remember me
     </div>
     <div class="form-group">
-        <input id="btnLogin" type="Submit" value="Login" class="btn btn-primary"></input>
+        <input id="btnLogin" type="Submit" value="Login" class="btn btn-primary" onclick="validate()"></input>
     </div>    
     <div class="container">
         <p> You don't have an account? <a href="SignUp.html">Sign Up</a></p>
@@ -35,8 +35,25 @@
     </footer>
     </div>
 
-</form>
-    
-
 </body>
+
+    
 </html>
+
+<script> 
+    function validate(){
+        if( document.getElementById("txtUser").value == "" ) {  
+           alert( "Please provide your Username!" );      
+           document.getElementById("txtUser").focus() ; 
+            return false;     
+                          }  
+         if( document.getElementById("txtPass").value == "" ) {  
+           alert( "Please provide your Password!" );      
+           document.getElementById("txtPass").focus() ;   
+            return false;   
+         }
+        
+        alert("Logged in Successfully");
+        window.location.href = "DashBoard.html";
+    }
+</script>

@@ -6,7 +6,9 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
+
 <body>
+
 <div class="container">
     <header class="container card text-white bg-primary"><h1>Registration</h1></header>
     
@@ -15,19 +17,19 @@
     
     <div class="form-group">
     <label for="email"><b>Email</b></label>
-    <input type="text" class="form-control" placeholder="Enter Email" name="email" id="email" required>
+    <input type="text" class="form-control" placeholder="Enter Email" name="email" id="txtEmail" >
     </div>
     <div class="form-group">
     <label for="psw"><b>Password</b></label>
-    <input type="password" class="form-control" placeholder="Enter Password" name="psw" id="psw" required>
+    <input type="password" class="form-control" placeholder="Enter Password" name="psw" id="txtPsw" >
     </div>
     <div class="form-group">
     <label for="psw-repeat"><b>Repeat Password</b></label>
-    <input type="password" class="form-control" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+    <input type="password" class="form-control" placeholder="Repeat Password" name="pswrepeat" id="txtPswRepeat" >
 </div>
     <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
     <div class="form-group">
-    <button type="submit"  class="btn btn-primary">Register</button>
+    <button type="submit" value="Register"  class="btn btn-primary" onclick="validate()">Register</button>
     
   </div>
   
@@ -37,4 +39,30 @@
   <footer class="container card text-white bg-primary">
     <h10>CopyRights 2021</h10>
 </footer>
-  </div></body>
+  </div>
+</body>
+<script> 
+  function validate(){
+    
+      if( document.getElementById("txtEmail").value == "" ) {  
+         alert( "Please provide your Email!" );      
+         document.getElementById("txtEmail").focus() ; 
+         return false;     
+                       }  
+      if( document.getElementById("txtPsw").value == "" ) {  
+         alert( "Please provide your Password!" );      
+         document.getElementById("txtPsw").focus() ;   
+         return false;   
+         
+      }
+      if(document.getElementById("txtPswRepeat").value == "" ) {  
+         alert( "Repeat your Password!" );      
+         document.getElementById("txtPswRepeat").focus() ;   
+         return false;   
+         
+      }  
+      //return true;
+      alert("Registered Successfully");
+      window.location = "./Login.html";
+  }
+</script>
